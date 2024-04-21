@@ -1,0 +1,20 @@
+Files in this directory
+
+- readme
+- model.mod			[Model and data (example) used in the MILP formulation in the paper]
+- input.dat			[Input data (example) to run the model] 
+- model.run			[Commands to run the model]
+
+The formulation is in 'model.mod' file.
+Example data for the model is in 'input.dat' file. 
+The execution commands are in 'model.run' file.
+
+Decision variables: 
+x[]: feasibility of transferring ith timestep (x[i] = 1 is ith analysis may be transferred for in situ visualization, 0 if not)
+total_imp: Total importance of all the time steps that were recommended for in situ visualization
+
+We used the AMPL (Version 20211221) [1] modeling language for our formulations and the BARON solver which implements branch and reduce method to solve non-linearly constrained optimization problems. Any other solver for MILP can be used, as listed in [2]. Note that different solvers have different algorithms and hence varying solve times.
+
+[1] R. Fourer, D. M. Gay, and B. W. Kernighan, AMPL: A Modeling Language for Mathematical Programming, 2nd ed. Duxbury Press, 2003.
+[2] http://ampl.com/products/solvers/open-source/
+

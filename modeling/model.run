@@ -1,0 +1,8 @@
+option solver baron;
+model model.mod;
+data input.dat;
+solve;
+display execute;
+display x;
+display total_imp;
+
